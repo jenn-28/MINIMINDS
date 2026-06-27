@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+body{
+    background-color: #2fabd4;
+    font-family: "Poppins", sans-serif;
+    height: 100vh;
+    text-align: center;
+}
+
+.btn{
+    font-size: 18px;
+    font-weight: 600;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #3196f5;
+    margin-top: 2%;
+    padding: 10px 20px;
+}
+#shape{
+    font-size: 15px;
+    font-weight: 600;
+    border: 3px solid black;
+    border-radius: 10px;
+    margin-top: 2%;
+    padding: 10px 20px;
+}
+
+.inicio{
+    background-color: #fff564;
+    display: flex;
+    margin: 9% 10%;
+    padding: 4%;
+    border: 5px solid black;
+    border-radius: 2em;
+    width: 75%;
+    font-size: 22px;
+    position: fixed;
+    font-weight: 600;
+}
+
+.inicio button{
+    padding: 10px;
+    width: 35%;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #a86ef3;
+    font-size: 25px;
+    font-weight: 600;
+    margin: 2%;
+
+}
+.inicio button:hover{
+    background-color: #8439e6;
+}
+
+.canvas-container {
+    width: 58%;
+    height: 100vh;
+    margin: 0 auto;
+    position: relative;
+}
+
+canvas {
+    border: 1px solid black;
+    background-color: rgb(215, 235, 249);
+    width: 100%;
+    height: 100%;
+    cursor: crosshair;
+}
+
+#feedback {
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+#stop, #stop-button{
+    font-size: 20px;
+    font-weight: 600;
+    border: 3px solid black;
+    border-radius: 10px;
+    background-color: #3196f5;
+    margin-top: 2%;
+    padding: 10px 70px;
+}
+#stop, #stop-button:hover{
+    background-color: #0073df;
+}
+.end{
+    display: flex;
+    text-align: center;
+   /* border: 5px solid black;*/
+    width: 80%;
+    font-weight: 600;
+    font-size: 18px;
+    margin: 10%;
+    position: fixed;
+}
+.end h2{
+    font-family: 'Modak', system-ui; 
+    font-size: 5em;
+    font-weight: 400;
+    }
+
+#submit-completion-form{
+    background-color: #fff23c;
+    margin:2%;
+    padding: 15px 30px;
+    font-size: 20px;
+    font-weight: 600;
+    border: 3px solid black;
+    border-radius: 10px;
+}
+
+#submit-completion-form:hover{
+    background-color: #c4b700;
+}
+
+
+@media(max-width:868px){
+    .canvas-container {
+        width: 95%;
+        height: 90vh;
+    }
+    .inicio{
+        text-align: center;
+        margin: 25% 6%;
+        padding: 4%;
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        font-size: 15px;
+        position: fixed;
+        font-weight: 500;
+    }
+    
+    .inicio button{
+        padding: 10px;
+        width: 90%;
+        border: 3px solid black;
+        border-radius: 10px;
+        background-color: #a86ef3;
+        font-size: 15px;
+        font-weight: 600;
+        margin: 2% 5%;
+    
+    }
+}

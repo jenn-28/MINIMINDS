@@ -1,0 +1,244 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  text-align: justify;
+  font-family: 'poppins', sans-serif; 
+    }
+/* Estilos para el encabezado */
+.sec {
+  position: relative;
+  background-image: url(../imagenes/fondoInicio.png);
+  background-size: cover;
+  overflow: hidden;
+  height: 100vh;
+  width: 100%;
+}
+
+.titulo {
+  text-align: center;
+  font-weight: 500; 
+  font-size: 190px; 
+  margin-left: 25%;
+  margin-top: 10%;
+  display: block; 
+  z-index: 1000;
+  padding: 70px;
+  font-family: 'Modak', system-ui;
+  color: rgb(250, 234, 11);
+    text-shadow: 0 0 5px rgb(25, 50, 194),
+    0 0 10px rgb(25, 50, 194),
+    0 0 20px rgb(25, 50, 194);
+}
+
+.logo-1 {
+  position: absolute;
+  left: 5%;
+  top: 20%;
+  z-index: 1;
+  width: 6%;
+}
+
+.menu-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: transparent;
+  padding: 10px;
+  width: 100%;
+  font-size:1.5em;
+  cursor:pointer;
+  color:#000;
+  font-weight: 700;
+  text-decoration: none;
+  z-index: 10 ;
+
+}
+
+
+.menu-fixed i{
+  font-size:2em;
+  margin: 0 12px 0 5px;
+
+}
+
+/* Estilos para el menú desplegable lateral */
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #ebe68a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  padding-right: 8px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #2a22758e;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+
+/* Estilos para el contenido principal */
+.main-content {
+  padding: 20px;
+  background-color: rgba(252, 241, 97, 0.692);
+}
+.main-content h2{
+  font-size: 5em;
+  font-weight: 300;
+  font-family: 'Modak', system-ui;
+  color: rgb(203, 178, 224);
+    text-shadow: 0 0 5px rgb(49, 49, 48),
+    0 0 10px rgb(31, 31, 29),
+    0 0 20px rgb(145, 149, 175);
+}
+.class-list, .task-list {
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; /* Distribuye las tarjetas uniformemente en la fila */
+}
+
+/* Estilos para las tarjetas de clases y tareas */
+.class, .task {
+  margin: 20px;
+  background-color: #8a85db;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 4px 8px rgba(22, 22, 22, 0.836);
+  width: 45%; 
+  @media (max-width: 780px) {
+    width: 100%; /* Cambia el ancho a 100% en dispositivos pequeños */
+  }
+}
+
+.class h3, .task h3 {
+  font-size: 30px;
+  color: #080808;
+  margin-bottom: 10px;
+}
+
+.class p, .task p {
+  font-size: 14px;
+  color: #161616;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+.main-content .btn{
+  font-weight: 600;
+  background-color: #58b9fa;
+  border-radius: 5em;
+  padding: 5px;
+  width: 35px;
+  margin: 10px;
+  box-shadow: 0 2px 6px rgba(22, 22, 22, 0.836);
+
+}
+.main-content .btn:hover{
+  background-color: #ebe68a;
+}
+
+.btnlg{
+  font-weight: 600;
+  background-color: #58b9fa;
+  border-radius: 5em;
+  padding: 5px;
+  width: 100px;
+  margin: 10px;
+  box-shadow: 0 2px 6px rgba(22, 22, 22, 0.836);
+}
+.btnlg:hover{
+  background-color: #ebe68a;
+}
+/* Estilos para los botones fijos en la parte inferior */
+
+
+.btn-fix{
+  border: 2px solid #000;
+  border-radius: 5px;
+  font-size: 20px;
+  padding: 3px 25px ;
+  font-weight: 600;
+  background-color: #ebe68a;
+
+}
+.btn-fix i{
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.btn-fix:hover{
+  background-color: #fdef2e;
+}
+.fixed-button button{
+  margin: 15px 35px;
+}
+footer{
+  background-color: #ebe68a;
+  padding: 3%;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  font-size: 12px;
+}
+
+/* Estilos responsivos */
+@media (max-width: 780px) {
+  .sec {
+    position: relative;
+    background-image: url(../imagenes/fondoInicio.png);
+    background-size: contain;
+    height: 300px;
+  }
+  .titulo {
+      font-size: 80px;
+      text-shadow: 0 0 5px rgb(30, 27, 187), 0 0 8px rgb(70, 97, 185), 0 0 15px rgb(70, 91, 185);
+      margin-left: -60px;
+      margin-top: -30px;
+  }
+  .menu-fixed{
+    font-size:1em;
+  }
+  
+  .logo-1 img{
+    margin-top: 260%;
+    margin-left: 450%;
+      width: 150px;
+      height: 150px;
+      z-index: 3;
+  }
+
+  .sidenav a {
+      font-size: 20px;
+  }
+  .main-content h2{
+    font-size: 3em; 
+    margin: 3%;  
+  }
+ 
+}

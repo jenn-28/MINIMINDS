@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  text-align: justify;
+  font-family: 'poppins', sans-serif; 
+    }
+    body{
+      margin: 0;
+      background-color: #31c2fcd2;
+      }
+      .nombre-grupo{
+        text-align: center;
+        margin-top: 5%;
+        font-weight: 300; 
+        font-size: 6em; 
+        z-index: 1;
+        padding: 5px;
+        font-family: 'Modak', system-ui;
+        color: rgb(250, 234, 11);
+         
+      }
+      .nombre-profe{
+        text-align: center;
+        margin-top: 2%;
+        margin-bottom: 2%;
+        font-weight: 600; 
+        font-size: 1.2em; 
+        z-index: 1;
+        padding: 5px;
+        font-family: 'poppins', sans-serif; 
+      }
+.menu-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  width: 100%;
+  font-size:1.5em;
+  cursor:pointer;
+  color:#000;
+  z-index: 100;
+  font-weight: 700;
+    }
+.menu-fixed i{
+  font-size:2em;
+  margin: 0 12px 0 5px;
+}
+/*Menu desplegable lateral*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #ebe68a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  padding-right: 8px;
+
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #2a22758e;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+.tarjeta-inscrip{
+    text-align: center;
+    margin-top: 15%;
+    margin-left: 7.5%;
+    width: 75%;
+    background-color: #faf376;
+    border: 2px solid black;
+    border-radius: 2em;
+    padding: 2% 0;
+}
+.mensaje-tarjeta{
+    text-align: center;
+    margin-left: 15%;
+}
+.tarjeta-inscrip form{
+    width: 70%;
+    margin-left: 15%;
+}
+
+@media (max-width: 850px) {
+    .nombre-grupo{
+        text-align: center;
+        margin-top: 14%;
+        font-size: 3em; 
+      }
+      .nombre-profe{
+        font-size: 1em; 
+       
+      }
+      .menu-fixed{
+        font-size:1em;
+      }
+}

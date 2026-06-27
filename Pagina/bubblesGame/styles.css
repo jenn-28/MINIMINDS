@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Modak&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #39cefccb; 
+  font-family: "Poppins", sans-serif;
+
+}
+/*Burbujas*/
+.bubble {
+  font-weight: 500;
+  position: absolute;
+  background-color: #4caf4f9d;
+  padding: 3%;
+  border-radius: 50%;
+  animation: bubbleAnimation linear forwards;
+  font-size: 25px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* Agregar sombra */
+  box-shadow: 4px 3px 12px 3px #4f6e50; /* Modificar los valores según tus preferencias */
+  /* Agregar efecto 3D */
+  transform: perspective(500px) rotateX(30deg) rotateY(10deg);
+}
+@keyframes bubbleAnimation {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-500%); /* Modifica el porcentaje para ajustar la velocidad de desplazamiento */
+  }
+}
+
+.bubble.burst {
+  animation: burstAnimation 0.5s forwards;
+}
+
+@keyframes burstAnimation {
+  from {
+    transform: scale(1);
+    opacity: 1;
+  }
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/*Elementos del juego*/
+#game-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.925);
+  padding: 10px;
+  box-sizing: border-box;
+  z-index: 1;
+  display: flex;
+  flex-direction: row;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+
+#score,
+#timer {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+#game-container {
+  margin-top: 150px;
+  position: fixed;
+  height: 100vh; 
+  overflow: hidden;
+  width: 100%;
+}
+
+#game-container:before {
+  content: "";
+  background: url('../../js_files/peces.json'); 
+  background-size: 100%;
+  z-index: -1; 
+  bottom: -100px;
+}
+/* Estilos para el panel de control */
+#inicio-juego {
+  margin:120px auto;
+  background-color: #9bfde5ea; /* Color de fondo */
+  box-shadow: 0 2px 5px 2px #161616;
+  padding: 20px;
+  border-radius: 10px;
+  width: 75%;  
+  font-weight: 600;
+  text-align: center;
+  font-family: Arial, sans-serif; /* Fuente agradable a la vista */
+}
+#inicio-juego h1{
+  font-family: 'Modak', system-ui; 
+  font-size: 3.5em;
+  font-weight: 400;
+}
+#inicio-juego button{
+  width: 45%;
+  margin: 2%;
+  font-size: 25px;
+}
+/* Estilos para la sección de resultados */
+.result {
+  margin-top: 100px;
+  background-color: #9bfde5ea; /* Color de fondo */
+  box-shadow: 0 2px 5px 2px #161616;  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto; /* Centrar horizontalmente */
+  width: 600px;
+  text-align: center;
+  font-weight: 600;
+  text-align: center;
+  font-family: Arial, sans-serif;
+  position: fixed;
+  top: 50%; /* Centrar verticalmente */
+  left: 50%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%);
+}
+
+.result h2{
+  font-family: 'Modak', system-ui; 
+  font-size: 3.5em;
+  font-weight: 400;
+}
+
+/* Estilos para los botones */
+button {
+  padding: 10px 20px;
+  margin: 10px 30px 20px auto;
+  border: none;
+  border-radius: 5px;
+  background-color: #0ebb79; /* Color de fondo */
+  box-shadow: 0 2px 5px 2px #161616;
+  color: white;
+  cursor: pointer;
+  font-family: Arial, sans-serif; /* Fuente agradable a la vista */
+  font-size: 18px; /* Tamaño de letra */
+  font-weight: 600;
+}
+
+button:hover {
+  background-color: #5cc261; /* Cambio de color al pasar el mouse */
+}
+
+@media(max-width:768px){
+  #inicio-juego {
+    margin:15% 1%;
+    padding: 20px 20px 50px 20px;
+    width: 85%;
+  }
+  #inicio-juego button{
+    width: 40%;
+    margin: 2%;
+  }
+
+  button{
+    font-size: 15px; /* Tamaño de letra */
+  }
+
+  .result{
+    margin-top: 10px;
+    width: 90%;
+
+  }
+}

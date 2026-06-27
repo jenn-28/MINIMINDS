@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css"> <!-- Agrega tus estilos CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="../../imagenes/LogoS.png" type="image/x-icon">
+
+    <title>Miniminds</title>
+</head>
+<body>
+    <header>
+        <h2 class="titulo2 titulo">M i n i m i n d s</h2>
+        <h1 class="titulo">M E M O R A M A</h1>
+    </header>
+
+    <!-- Pantalla de selección de tema -->
+    <div id="seleccionTema">
+        <h2 class="h2st">Selecciona un tema:</h2>
+        <div class="temas">
+            <!-- temas -->
+            <div class="fila">
+                <div class="tema">            
+                    <img src="img/tema_numeros.png" alt="Números" onclick="seleccionarTema('numeros')">
+                </div>
+                <div class="tema">
+                    <img src="img/tema_vocales.png" alt="Vocales" onclick="seleccionarTema('vocales')">
+                </div>
+                <div class="tema">
+                    <img src="img/tema_abc.png" alt="Abecedario" onclick="seleccionarTema('abecedario')">
+                </div>
+            </div>
+            <div class="fila">
+                <div class="tema">
+                    <img src="img/tema_colores.png" alt="Colores" onclick="seleccionarTema('colores')">
+               </div>
+               <div class="tema">
+                   <img src="img/tema_animales.png" alt="Animales" onclick="seleccionarTema('animales')">
+               </div>
+               <div class="tema">
+                <img src="img/figuras.png" alt="FigurasGeometricas" onclick="seleccionarTema('figuras')">
+            </div>
+            </div>
+            
+        </div>
+        <div class="salir_memo" style="display: flex; justify-content: center; margin: 5%;">
+            <button class="btn_back" onclick="window.location.href='../../Pagina/juegos.php'">Salir</button>
+        </div>
+    </div>
+
+    <!-- Pantalla de selección de nivel de dificultad -->
+    <div id="seleccionNivel" style="display: none;"> <!-- Oculta esta pantalla inicialmente -->
+        <h2 class="selec-level">Selecciona un nivel de dificultad:</h2>
+        <div class="niveles">
+            <!-- Botones para seleccionar el nivel de dificultad -->
+            <button onclick="seleccionarNivel('facil')">Fácil</button>
+            <button onclick="seleccionarNivel('dificil')">Difícil</button>
+        </div>
+        <!-- Botón para regresar a la pantalla de selección de tema -->
+        <button class="btn_back" onclick="goBack()">Regresar</button>
+    </div>
+    
+    <script src="script3.js"></script>
+    <script>
+        function goBack() {
+            window.history.back();
+        }
+    </script>
+
+
+</body>
+</html>

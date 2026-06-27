@@ -1,0 +1,34 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+    .sec {
+        z-index: 1;
+        position: relative;
+        width: 98vw;
+        height: 99vh;
+        overflow: hidden; /* Oculta las estrellas que se salen del límite */
+    }
+.star {
+    position: absolute;
+    color: #a8e98faf;
+    z-index: 1;
+}
+
+.star::before {
+    content: '\f005';
+    font-family: FontAwesome;
+}
+
+.star.animate {
+    color: rgb(251, 255, 0);
+    text-shadow: 0 0 5px rgb(251, 255, 0),
+                 0 0 20px rgb(251, 255, 0),
+                 0 0 50px rgb(251, 255, 0);
+}
+
+.star.animate:hover {
+    font-size: 50px;
+}

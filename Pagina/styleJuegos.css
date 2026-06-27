@@ -1,0 +1,204 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Modak&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  text-align: justify;
+  font-family: 'poppins', sans-serif; 
+    }
+    body{
+      margin: 0;
+      background-color: #31c2fcd2;
+      }
+.menu-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 5px;
+  width: 100%;
+  font-size:1.5em;
+  cursor:pointer;
+  color:#000;
+  z-index: 100;
+  font-weight: 700;
+    }
+.menu-fixed i{
+  font-size:2em;
+  margin: 0 12px 0 5px;
+}
+/*Menu desplegable lateral*/
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  background-color: #ebe68a;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  padding-right: 8px;
+}
+
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 28px;
+  color: #2a22758e;
+  display: block;
+  transition: 0.3s;
+}
+
+.sidenav a:hover {
+  color: #000000;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+/* Estilos para el contenido principal */
+.main-content {
+  padding: 3%;
+  background-color: rgba(245, 233, 72, 0.904);
+  border-radius: 3em;
+  width: 85%;
+  margin: 2% 7%;
+}
+/*Fin del menu*/
+
+.titulo {
+  text-align: center;
+  font-weight: 500; 
+  font-size: 190px; 
+  margin-left: 5%;
+  margin-top: 10px;
+  display: block; 
+  z-index: 1;
+  padding: 10px;
+  font-family: 'Modak', system-ui;
+  color: rgb(250, 234, 11);
+    text-shadow: 0 0 5px rgb(36, 46, 104),
+    0 0 10px rgb(33, 66, 158),
+    0 0 20px rgb(133, 181, 209);
+}
+
+
+.cartas{
+    display: flex;
+    flex-direction: row;
+}
+.card {
+    width: 30%;
+    height: 330px;
+    border: 3px solid #070707;
+    background-color: #6866e4da;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.3s ease-in-out;
+    margin: 3%;
+    padding: 2%;
+}
+
+.card:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
+}
+
+.card-img-top {
+    margin: 10px 10px -40px 0;
+    width: 90%;
+    height: 190px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    overflow: hidden;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    margin-top: 25px;
+}
+
+.btn-game {
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    font-weight: 600;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    background-color: #fbff00;
+    color: #000000;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.btn-game:hover {
+    background-color: #b6b45c;
+}
+
+footer{
+  background-color: #ebe68a;
+  padding: 3%;
+  display: flex;
+  flex-wrap: wrap; 
+  justify-content: space-between; 
+  font-size: 12px;
+}
+
+@media (max-width: 750px) {
+  .titulo {
+      font-size: 100px;
+      text-shadow: 0 0 5px rgb(30, 27, 187), 
+      0 0 10px rgb(70, 97, 185), 
+      0 0 20px rgb(70, 91, 185);
+      margin-left: 5px;
+      margin-top: 40px;
+  }
+  .menu-fixed{
+    font-size:1em;
+  }
+
+  .main-content{
+    display: flex;
+    flex-direction: column;
+  }
+  .card{
+    width: 85%;
+    height: 250px;
+  }
+  .card-img-top {
+    width: 280px;
+    height: 180px;
+}
+.card-title {
+  font-size: 1rem;
+  margin-top: 25px;
+}
+  .card-body{
+    display: flex;
+    flex-direction: row;
+  }
+  .btn-game{
+    padding: 3px;
+    height: 30px;
+    margin-left: 8%;
+    margin-top: 20px;
+    font-size: 15px;
+  }
+  .cartas{
+    display: flex;
+    flex-direction: column;
+  }
+}

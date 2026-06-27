@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+body{
+    background-color: rgba(252, 241, 97, 0.692);
+}
+.nav {
+    padding: 20px 10px;
+    background-image: url(../../imagenes/fondoInicio.png);
+    background-size: cover;
+    overflow: hidden;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+}
+.nav a {
+    float: left;
+    color: #3a3a3a;
+    text-align: center;
+    padding: 1% 6%;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 700;
+}
+.nav a:hover {
+    background-color: #73c8fa;
+    border-radius: 8px;
+    color: rgb(0, 0, 0);
+}
+.nav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 20px;
+}
+
+/*Grupos y Tareas*/
+.boton-C{
+    margin-left: 5%;
+    width: 90%;
+    background-color: rgb(131, 125, 216);
+    font-weight: 600;
+    font-size: medium;
+}
+.content {
+    display: none;
+}
+
+.task-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+.task-table th, .task-table td {
+    border: 1px solid #ddd;
+    padding: 8px;
+}
+.task-table th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+.task-table td {
+    text-align: left;
+}
+.print-btn {
+    position: absolute;
+    color: #ffff;
+    font-weight: 600;
+    top: 0;
+    right: 20px;
+    background-color: rgb(70, 113, 255);
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+}
+
+/*Cuestionarios*/
+
+/*Estructura del cuestionario*/
+
+
+@media screen and (max-width: 768px) {
+    .nav a {
+        float: left;
+        text-align: center;
+        padding: 12px;
+        text-decoration: none;
+        font-size: 15px;
+    }
+}

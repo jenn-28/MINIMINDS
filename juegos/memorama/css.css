@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Bungee+Shade&family=Modak&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+
+  }
+  body {
+    background-color: #31a6f4;
+   
+  }
+  .wrapper {
+    box-sizing: content-box;
+    width: 90%;
+    padding: 4% 3% 5% 3%;
+    margin-top: 20%;
+    margin-bottom: 10%;
+    background-color: #f2f3de;
+   position: absolute;
+    transform: translate(-50%, -50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 1em;
+    box-shadow: 0 0.9em 2.8em rgba(86, 66, 0, 0.2);
+  }
+  .game-container {
+    position: relative;
+    width: 100%;
+    display: grid;
+    gap: 0.6em;
+  }
+  .stats-container {
+    text-align: right;
+    margin-bottom: 1.2em;
+  }
+  .stats-container span {
+    font-weight: 600;
+  }
+  .card-container {
+    position: relative;
+    width: auto;
+    height: 14em;
+    cursor: pointer;
+  }
+  .card-container img{
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    height: 100%; /* Permite que la altura se ajuste automáticamente según el ancho */
+    max-width: 100%; /* La imagen no excederá el ancho del contenedor */
+    max-height: 100%; /* La imagen no excederá la altura del contenedor */
+    border-radius: 12%;
+}
+
+  .card-before,
+  .card-after {
+    position: absolute;
+    border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 5px solid #000000;
+    transition: transform 0.7s ease-out;
+    backface-visibility: hidden;
+    border-radius: 15%;
+  }
+  .card-before {
+    background-color: #f1da8f;
+    font-size: 2.8em;
+    font-weight: 600;
+  }
+  .card-after {
+    background-color: #ffffff;
+    transform: rotateY(180deg);
+  }
+  .card-container.flipped .card-before {
+    transform: rotateY(180deg);
+  }
+  .card-container.flipped .card-after {
+    transform: rotateY(0deg);
+  }
+  .controls-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 150%;
+    background-color: #31b6f4;
+    top: 0;
+    overflow-y: inherit;
+  }
+  
+  button {
+    border: none;
+    border-radius: 0.5em;
+    padding: 1em 1.5em;
+    cursor: pointer;
+
+  }
+  #start{
+    font-size: 4em;
+    display: block;
+    margin: 20px auto 20px auto;
+    background-color: #f8ee60;
+    color: #000000;
+    border-radius: 70%;
+    padding: 50px 70px 50px 70px;
+  }
+  #back{
+    font-size: 1em;
+    font-weight: 400;
+    display: block;
+    margin: 20px auto 23em auto;
+    background-color: #1065c5;
+    color: #ffffff;
+    border-radius: 15px;
+    padding: 10px 80px 10px 80px;
+
+  }
+  #stop {
+    font-size: 2em;
+    display: block;
+    margin: .5em auto 0 auto;
+    background-color: #f3e673;
+    color: #000000;
+    border-radius: 75%;
+  }
+  .controls-container button {
+    font-size: 2em;
+    box-shadow: 0 0.6em 2em rgba(86, 66, 0, 0.2);
+  }
+  .hide {
+    display: none;
+  }
+  #result {
+    text-align: center;
+  }
+  #result h2 {
+    font-size: 2.5em;
+  }
+  #result h4 {
+    font-size: 1.8em;
+    margin: 0.6em 0 1em 0;
+  }
+
+  /*index.html*/
+  .titulo{
+    text-align: center;
+    font-weight: 100; 
+    font-size: 10em; 
+    display: block; 
+    z-index: 1000;
+    margin: 1% auto 0 auto;
+    font-family: 'Modak', system-ui;
+    color: rgb(250, 234, 11);
+      text-shadow: 0 0 5px rgba(137, 184, 245, 0.836),
+      0 0 10px rgba(73, 121, 180, 0.836),
+      0 0 18px rgba(71, 140, 231, 0.836);
+  }
+  .titulo2{
+    display: none;
+  }
+.h2st{
+  font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 30px;
+  font-style: normal;
+  justify-content: center;
+  margin: 1.5em;
+  margin-left: 5%;
+}
+  .temas{
+    justify-content: center;
+    display: flex;
+    cursor: pointer;
+    height: 100%;
+    flex-direction: column;
+
+  }
+  .fila{
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tema{
+    border: 5px solid #000000;
+    height: auto;
+    margin: 1% 6% 2% 7%;
+    border-radius: 14%;
+  }
+  .tema img{
+    width: 100%; /* Asegura que el contenedor ocupe todo el ancho disponible */
+    height: 100%; /* Permite que la altura se ajuste automáticamente según el ancho */
+    max-width: 100%; /* La imagen no excederá el ancho del contenedor */
+    max-height: 100%; /* La imagen no excederá la altura del contenedor */
+    border-radius: 12%; 
+}
+  .tema:hover{
+    border: 5px solid #2e2d2d;
+    transform: scale(1.1);
+    opacity: 90%;
+  }
+
+/*Botones del NIVEL/DIFICULTAD del juego*/
+  #seleccionNivel {
+    display: none; /* Oculta esta pantalla inicialmente */
+    text-align: center; /* Centra el contenido horizontalmente */
+    height: 100%;
+    width: 98%;
+  }
+   #seleccionNivel h2{
+    margin-top: 1%;
+    font-size: 2.5em;
+    font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-style: normal;
+  justify-content: center;
+  
+   }
+  
+  .niveles {
+    display: flex; /* Utiliza un layout flexbox */
+    justify-content: center; /* Centra los elementos horizontalmente */
+    gap: 10%; /* Agrega espacio entre los elementos */
+    margin-top: 6%; /* Agrega espacio en la parte superior */
+    margin-bottom: 3%;
+  }
+  
+  .niveles button {
+    background-color: yellow; /* Color de fondo amarillo */
+    padding: 20px 50px; /* Espaciado interno */
+    font-size: 20px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+    font-family: "Poppins", sans-serif;
+  font-weight: 800;
+  font-size: 25px;
+  font-style: normal;
+  justify-content: center;
+  }
+
+  .niveles button:hover{
+    background-color: #31b6f4;
+  }
+
+  .btn_back{
+    background-color: rgb(0, 195, 255); /* Color de fondo amarillo */
+    padding: 20px 70px; /* Espaciado interno */
+    font-size: 20px; /* Tamaño de fuente */
+    border: none; /* Sin borde */
+    cursor: pointer;
+    margin-bottom: 2%;
+    font-family: "Poppins", sans-serif;
+   font-weight: 800;
+   font-size: 18px;
+   font-style: normal;
+   justify-content: center;
+  }
+  
+  
+  @media (max-width: 768px) {  
+  .titulo{
+    font-size: 3.2em;
+  }
+  .titulo2{
+    display: block;
+    font-size: 3.5em;
+  }
+  .btn_back{
+    margin-top: 15%;
+    padding: 20px 50px; 
+  }
+
+  .tema{
+    border: 2px solid #000000;
+    margin: 1% 3% 10% 3%;
+  }
+  .seleccionNivel{
+    margin-top: 15%;
+  }
+  .selec-level h2{
+    margin: 10px;
+    font-size: 20px;
+  }
+  button {
+    padding: 10px;
+  }
+  .niveles button {
+    margin-top: 20%;
+    padding: 10px 25px; /* Espaciado interno */
+  font-size: 19px;
+  }
+
+  .btn_back{
+    font-size: 18px;
+    padding: 10px 40px; /* Espaciado interno */
+  }
+  #start{
+    padding: 18px 22px 18px 22px;
+  }
+  #back{
+    margin: 3em auto 18em auto;
+    padding: 8px 50px 8px 50px;
+  }
+  #stop {
+    font-size: 2em;
+  }
+  
+  .card-container {
+    height: 7em;
+  }
+}
+  
